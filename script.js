@@ -3,7 +3,7 @@ functiasync function generateFormula() {
     const response = await fetch('https://your-vercel-app.vercel.app/api/generateFormula', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: userInput })
+        body: JSON.stringify({ querhttps://ai-excel-formula-assistant-nzrdl8gv-ankit-chandolas-projects.vercel.app/api/generateFormula
     });
     const data = await response.json();
     document.getElementById('result').innerText = `Generated Formula: ${data.formula}`;
