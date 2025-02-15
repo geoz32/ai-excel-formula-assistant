@@ -1,6 +1,15 @@
-function generateFormula() {
+functiasync function generateFormula() {
     const userInput = document.getElementById('userInput').value;
-    // Simulate AI processing (this should be replaced with actual API call)
-    const formula = `=SUM(${userInput})`; // Example formula generation
-    document.getElementById('result').innerText = `Generated Formula: ${formula}`;
+    const response = await fetch('https://your-vercel-app.vercel.app/api/generateFormula', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: userInput })
+    });
+    const data = await response.json();
+    document.getElementById('result').innerText = `Generated Formula: ${data.formula}`;
+}
+
+function sendFeedback(success) {
+    // Placeholder function to handle user feedback
+    console.log(`Feedback received: ${success ? 'Yes' : 'No'}`);
 }
