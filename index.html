@@ -8,10 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>AI Excel Formula Assistant</h1>
-        <input type="text" id="userInput" placeholder="Enter your request for a formula">
-        <button onclick="generateFormula()">Generate Formula</button>
+        <h1>AI Excel Formula Assistant<<p>Type your Excel challenge in plain English and instantly get the perfect formula.</p>
+        <input type="text" id="userInput" placeholder=E.g., 'Calculate the sum of column A'
+        <button onclick="generateFormula()">Get My Formula
         <div id="result"></div>
+            <div id="feedback">
+  <p>Did this work?</p>
+  <button onclick="sendFeedback(true)">Yes</button>
+  <button onclick="sendFeedback(false)">No</button>
+</div>
     </div>
     <script src="script.js"></script>
 </body>
